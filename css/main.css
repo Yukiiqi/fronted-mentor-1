@@ -1,6 +1,11 @@
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
 article > * + * {
   margin-top: 0;
 }
+
 img {
   width: 100%;
   height: 100%;
@@ -13,20 +18,33 @@ img {
   background-color: hsl(244, 38%, 16%);
 }
 .main {
-  border-radius: 1rem;
+  border-radius: 0.8rem;
   overflow: hidden;
   box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.16);
+  margin: 0 auto;
+  /* min-height: 100vh;
+  align-items: center; */
+  max-width: 62.5rem;
+  display: grid;
 }
+.grid2 {
+  display: grid;
+  gap: 1 rem;
+}
+
 /*
 desktop only style
 */
 @media (min-width: 40em) {
   .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .grid > * {
+    width: 50%;
   }
   .grid2 {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -39,9 +57,15 @@ mobile only style
   }
 }
 
-div.card {
+/* div.card {
   grid-row-start: 1;
   grid-row-end: 3;
+} */
+
+.picture article,
+.picture div,
+.picture header {
+  height: 100%;
 }
 
 .div.card ul {
@@ -60,8 +84,9 @@ body {
 
 p {
   font-family: "Inter", sans-serif;
-  font-size: 0.9375rem;
+  font-size: 0.8rem;
   font-weight: 400;
+  color: rgba(254, 255, 255, 0.555);
 }
 h1 {
   font-family: "Inter", sans-serif;
@@ -89,6 +114,7 @@ div.card h1 span {
 
 .card li span:nth-child(2) {
   font-family: "Lexend Deca", sans-serif;
+  color: rgba(254, 255, 255, 0.555);
   font-weight: 400;
   font-size: 10px;
 }

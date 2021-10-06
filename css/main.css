@@ -26,10 +26,11 @@ img {
   align-items: center; */
   max-width: 62.5rem;
   display: grid;
+  margin-top: 10rem;
 }
 .grid2 {
   display: grid;
-  gap: 1 rem;
+  gap: 0.9 rem;
 }
 
 /*
